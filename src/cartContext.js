@@ -31,7 +31,7 @@ const CartProvider = ({ children }) => {
   const removeItemFromWishlist = (index) => {
     setWishlistItems((prevWishlistItems) => {
       const updatedWishlistItems = [...prevWishlistItems];
-      updatedWishlistItems.splice(index, 1);
+      updatedWishlistItems.pop(index);
       return updatedWishlistItems;
     });
   };

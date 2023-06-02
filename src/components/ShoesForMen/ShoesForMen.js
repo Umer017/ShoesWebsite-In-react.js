@@ -203,7 +203,11 @@ const ShoesForMen = () => {
                   </AddToCartButton>
                   <AddToWishlistButton onClick={() => addWishlistItem(product)}>
                     <Icon>
-                      <AiFillHeart color="pink" size="1.2em" />
+                      <AiFillHeart
+                        color="pink"
+                        size="1.2em"
+                        style={{ hover: { color: 'red' } }}
+                      />
                     </Icon>
                     Add to Wishlist
                   </AddToWishlistButton>
