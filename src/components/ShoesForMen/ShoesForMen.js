@@ -194,7 +194,7 @@ const ShoesForMen = () => {
             <div style={{ display: 'flex' }}>
               {category.products.map((product) => (
                 <ProductCard
-                  onClick={Navigate('/product/:id')}
+                  onClick={Navigate('/productDetails/:id')}
                   key={product.id}
                 >
                   <ProductImage src={product.image} alt={product.name} />
