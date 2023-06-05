@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { CartContext } from '../../cartContext.js';
 import { AiFillHeart, AiOutlineShoppingCart } from 'react-icons/ai';
@@ -99,6 +100,7 @@ const Icon = styled.div`
 
 const ShoesForMen = () => {
   const { addItemToCart, addWishlistItem } = useContext(CartContext);
+  const Navigate = useNavigate();
   const categories = [
     {
       title: 'Sports',
@@ -191,7 +193,10 @@ const ShoesForMen = () => {
             <CategoryTitle>{category.title}</CategoryTitle>
             <div style={{ display: 'flex' }}>
               {category.products.map((product) => (
-                <ProductCard key={product.id}>
+                <ProductCard
+                  onClick={Navigate('/product/:id')}
+                  key={product.id}
+                >
                   <ProductImage src={product.image} alt={product.name} />
                   <ProductTitle>{product.name}</ProductTitle>
                   <ProductPrice>${product.price}</ProductPrice>
