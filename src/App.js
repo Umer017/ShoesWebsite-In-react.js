@@ -9,6 +9,7 @@ import ContactUs from './components/ContactUs/ContactUs.js';
 import Checkout from './components/Checkout/Checkout.js';
 import Wishlist from './components/Wishlist/Wishlist.js';
 import ShoesForMen from './components/ShoesForMen/ShoesForMen.js';
+import Registration from './components/Registration/Registration.js';
 import ProductDetailsPage from './components/ProductDetailsPage/ProductDetailsPage .js';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import CartProvider from './cartContext';
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="/wishlist" element={<Wishlist />}></Route>
           <Route path="/shoeformen" element={<ShoesForMen />}></Route>
+          <Route path="/register" element={<Registration />}></Route>
           <Route
             path="/productdetails"
             element={<ProductDetailsPage />}

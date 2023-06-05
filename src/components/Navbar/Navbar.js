@@ -126,6 +126,11 @@ const Navbar = () => {
           </NavLinkStyled>
         </NavItem>
         <NavItem>
+          <NavLinkStyled to="/register" activeClassName="active">
+            Register
+          </NavLinkStyled>
+        </NavItem>
+        <NavItem>
           <NavLinkStyled to="/cart" activeClassName="active">
             Add to Cart
           </NavLinkStyled>
