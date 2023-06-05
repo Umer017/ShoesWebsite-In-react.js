@@ -193,12 +193,11 @@ const ShoesForMen = () => {
             <CategoryTitle>{category.title}</CategoryTitle>
             <div style={{ display: 'flex' }}>
               {category.products.map((product) => (
-                <ProductCard
-                  onClick={Navigate('/productDetails/:id')}
-                  key={product.id}
-                >
+                <ProductCard key={product.id}>
                   <ProductImage src={product.image} alt={product.name} />
-                  <ProductTitle>{product.name}</ProductTitle>
+                  <ProductTitle onClick={Navigate('/productDetails/:id')}>
+                    {product.name}
+                  </ProductTitle>
                   <ProductPrice>${product.price}</ProductPrice>
                   <AddToCartButton onClick={() => addItemToCart(product)}>
                     <Icon>
