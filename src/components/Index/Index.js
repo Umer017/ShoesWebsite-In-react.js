@@ -5,6 +5,7 @@ import Categories from './Categories/Categories.js';
 import { AiFillHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 import { Carousel } from 'react-responsive-carousel';
 import Carasoul from './Carasoul/Carasoul.js';
+import ShoeStrip from './ShoeStrip/ShoeStrip.js';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const BannerContainer = styled.div`
@@ -110,7 +111,7 @@ const Index = () => {
   const offers = [
     {
       id: 1,
-      name: 'best from reebok',
+      name: 'best from nike',
       image:
         'https://th.bing.com/th/id/OIP.YguOkIP2xIjpoReX_q0R4gHaHa?pid=ImgDet&rs=1',
       price: 99.99,
@@ -118,7 +119,7 @@ const Index = () => {
     },
     {
       id: 2,
-      name: 'best from nike',
+      name: 'best from addidas',
       image:
         'https://th.bing.com/th/id/OIP.W44rbZFUPSl8ne3ka6ZghQHaHa?pid=ImgDet&rs=1',
       price: 49.99,
@@ -126,13 +127,21 @@ const Index = () => {
     },
     {
       id: 3,
-      name: 'best from addidas',
+      name: 'best from reebok',
       image:
         'https://th.bing.com/th/id/OIP.c30O0tzLjrEFQUMeGyZGnAHaHa?pid=ImgDet&rs=1',
       price: 49.99,
       discount: 30,
     },
     // Add more products here if needed
+  ];
+
+  const logos = [
+    'https://th.bing.com/th/id/R.d5f2067034c26a34e4c905f3262a43df?rik=sOaOQHTncO%2fMHw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-REs7ZNAPZ_g%2fUtU_vDNv3SI%2fAAAAAAAABnI%2fvKTDdMfvYe4%2fs1600%2f1.png&ehk=EIUuq0DZpsktdyFFo%2fA8lreMJtHlswNKMaG7um7OlFY%3d&risl=&pid=ImgRaw&r=0',
+    'https://i.pinimg.com/originals/d5/1b/09/d51b09d20ddc57341ea8e3822bbaebf8.png',
+    'https://i.pinimg.com/originals/2e/bf/1a/2ebf1a893b00a2093817f86cd78a4753.png',
+    'https://i.pinimg.com/originals/87/34/07/87340705b51a12d6bbdd99f0d6c4a910.png',
+    'https://www.vectorkhazana.com/assets/images/products/Fila_logo.png',
   ];
 
   return (
@@ -148,8 +157,9 @@ const Index = () => {
           showStatus={false}
           centerMode
           centerSlidePercentage={100 / 4}
-          infiniteLoop
-          swipeable={true}
+          // infiniteLoop
+          swipeable
+          emulateTouch
           showArrows
         >
           {allShoes.map((shoe) => (
@@ -175,6 +185,7 @@ const Index = () => {
           ))}
         </Carousel>
       </div>
+      <ShoeStrip logos={logos} />
       <Carasoul products={offers}></Carasoul>
     </>
   );

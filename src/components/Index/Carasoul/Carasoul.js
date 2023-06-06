@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-responsive-carousel';
+import { AiFillFire } from 'react-icons/ai';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const CardContainer = styled.div`
@@ -117,16 +118,24 @@ const StyledProductCarousel = styled(ProductCarousel)`
 const ProductCarouselContainer = styled.div`
   max-width: 100%;
   margin: 0 auto;
+  margin-top:20px;
+  margin-bottom:100px;
 `;
 
 const TitleOffer = styled.div`
   max-width: 100%;
   margin: 0 auto;
+  font-size:20px;
+  color:#dc143c;
+  font-weight:bold;
 `;
 
 const ProductCarouselWrapper = ({ products }) => {
   return (
     <ProductCarouselContainer>
+      <TitleOffer>
+        Special Deals <AiFillFire size="1.2em" />
+      </TitleOffer>
       <StyledProductCarousel products={products} />
     </ProductCarouselContainer>
   );
