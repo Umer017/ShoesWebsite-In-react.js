@@ -13,6 +13,8 @@ import Registration from './components/Registration/Registration.js';
 import ProductDetailsPage from './components/ProductDetailsPage/ProductDetailsPage .js';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import CartProvider from './cartContext';
+import ListShoe from './Admin/ListShoe';
+
 export default function App() {
   return (
     <CartProvider>
@@ -31,6 +33,7 @@ export default function App() {
             path="/productdetails"
             element={<ProductDetailsPage />}
           ></Route>
+          <Route path="/listshoe" element={<ListShoe />}></Route>
         </Routes>
       </BrowserRouter>
       <Outlet />
